@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StarGets
 {
-    public partial class Form1 : Form
+    public partial class FormDashboard : Form
     {
-        public Form1()
+        public FormDashboard(string usuario, string rol)
         {
             InitializeComponent();
         }
