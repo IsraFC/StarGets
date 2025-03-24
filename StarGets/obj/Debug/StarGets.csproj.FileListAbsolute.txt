@@ -9,3 +9,4 @@ C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.csproj.GenerateResource.cach
 C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.csproj.CoreCompileInputs.cache
 C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.exe
 C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.pdb
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.FormProyectos.resources
