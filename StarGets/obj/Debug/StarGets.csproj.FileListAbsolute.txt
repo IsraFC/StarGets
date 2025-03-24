@@ -1,0 +1,11 @@
+C:\Users\campo\StarGets\StarGets\bin\Debug\StarGets.exe.config
+C:\Users\campo\StarGets\StarGets\bin\Debug\StarGets.exe
+C:\Users\campo\StarGets\StarGets\bin\Debug\StarGets.pdb
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.csproj.AssemblyReference.cache
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.FormDashboard.resources
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.FormLogin.resources
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.Properties.Resources.resources
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.csproj.GenerateResource.cache
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.csproj.CoreCompileInputs.cache
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.exe
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.pdb

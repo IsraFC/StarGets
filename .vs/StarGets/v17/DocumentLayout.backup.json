@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\varko\\StarGets\\",
+  "WorkspaceRootPath": "C:\\Users\\campo\\StarGets\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\stargets\\stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\stargets\\stargets\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\campo\\StarGets\\stargets\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\stargets\\stargets\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\campo\\StarGets\\stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\stargets\\stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\campo\\stargets\\stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\campo\\StarGets\\stargets\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,28 +26,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FormDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormDashboard.cs",
               "RelativeDocumentMoniker": "StarGets\\FormDashboard.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormDashboard.cs",
+              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormDashboard.cs",
               "RelativeToolTip": "StarGets\\FormDashboard.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAFQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T18:12:48.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FormDashboard.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormDashboard.cs",
               "RelativeDocumentMoniker": "StarGets\\FormDashboard.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormDashboard.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormDashboard.cs [Dise\u00F1o]",
               "RelativeToolTip": "StarGets\\FormDashboard.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T18:12:21.64Z",
@@ -55,11 +55,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FormLogin.cs",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormLogin.cs",
+              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormLogin.cs",
               "RelativeDocumentMoniker": "StarGets\\FormLogin.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormLogin.cs",
+              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormLogin.cs",
               "RelativeToolTip": "StarGets\\FormLogin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -68,25 +68,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "FormLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormLogin.cs",
+              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormLogin.cs",
               "RelativeDocumentMoniker": "StarGets\\FormLogin.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormLogin.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormLogin.cs [Dise\u00F1o]",
               "RelativeToolTip": "StarGets\\FormLogin.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T18:00:58.561Z",
               "EditorCaption": " [Dise\u00F1o]"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

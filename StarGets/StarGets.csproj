@@ -46,17 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActividades.Designer.cs">
+      <DependentUpon>FormActividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDashboard.Designer.cs">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDepartamentos.Designer.cs">
+      <DependentUpon>FormDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpleados.Designer.cs">
+      <DependentUpon>FormEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMisActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMisActividades.Designer.cs">
+      <DependentUpon>FormMisActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProyectos.Designer.cs">
+      <DependentUpon>FormProyectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVerAvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerAvance.Designer.cs">
+      <DependentUpon>FormVerAvance.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +101,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StarGetsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="StarGetsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StarGetsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormDashboard.resx">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +120,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -97,9 +142,50 @@
     <None Include="StarGetsDataSet.xss">
       <DependentUpon>StarGetsDataSet.xsd</DependentUpon>
     </None>
+    <None Include="StarGetsDataSet1.xsc">
+      <DependentUpon>StarGetsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="StarGetsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StarGetsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StarGetsDataSet1.xss">
+      <DependentUpon>StarGetsDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\department.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actividades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\department1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proyect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\myactivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
