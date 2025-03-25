@@ -18,10 +18,7 @@ namespace StarGets
         public FormProyectos()
         {
             InitializeComponent();
-        }
 
-        private void FormProyectos_Load(object sender, EventArgs e)
-        {
             CargarDepartamentos();
             CargarProyectos();
         }
@@ -102,7 +99,7 @@ namespace StarGets
                 return;
             }
 
-            int idProyecto = Convert.ToInt32(dgvProyectos.CurrentRow.Cells["id_proyecto"].Value);
+            int idProyecto = Convert.ToInt32(dgvProyectos.CurrentRow.Cells[0].Value);
             int idDepartamento = (int)((dynamic)cbDepartamento.SelectedItem).Value;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -143,7 +140,7 @@ namespace StarGets
                 return;
             }
 
-            int idProyecto = Convert.ToInt32(dgvProyectos.CurrentRow.Cells["id_proyecto"].Value);
+            int idProyecto = Convert.ToInt32(dgvProyectos.CurrentRow.Cells[0].Value);
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -183,15 +180,22 @@ namespace StarGets
                 txtEstado.Text = row.Cells[6].Value.ToString();
                 txtDescripcion.Text = row.Cells[7].Value.ToString();
 
-                // Puedes buscar el departamento en cbDepartamento si deseas
+                int idDepartamento = Convert.ToInt32(row.Cells[1].Value);
+
+                foreach (var item in cbDepartamento.Items)
+                {
+                    if (((dynamic)item).Value == idDepartamento)
+                    {
+                        cbDepartamento.SelectedItem = item;
+                        break;
+                    }
+                }
             }
         }
 
-        private void FormProyectos_Load_1(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'starGetsDataSet.proyectos' Puede moverla o quitarla según sea necesario.
-            this.proyectosTableAdapter.Fill(this.starGetsDataSet.proyectos);
-
+            LimpiarCampos();
         }
     }
 }

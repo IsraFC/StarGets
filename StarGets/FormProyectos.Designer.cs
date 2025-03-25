@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvProyectos = new System.Windows.Forms.DataGridView();
+            this.proyectosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.starGetsDataSet = new StarGets.StarGetsDataSet();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
@@ -49,38 +51,18 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblNombreProyectos = new System.Windows.Forms.Label();
-            this.starGetsDataSet = new StarGets.StarGetsDataSet();
             this.starGetsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proyectosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proyectosTableAdapter = new StarGets.StarGetsDataSetTableAdapters.proyectosTableAdapter();
-            this.idproyectoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iddepartamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreproyectoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechainicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaentregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoproyectoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyectosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProyectos
             // 
-            this.dgvProyectos.AutoGenerateColumns = false;
             this.dgvProyectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProyectos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idproyectoDataGridViewTextBoxColumn,
-            this.iddepartamentoDataGridViewTextBoxColumn,
-            this.nombreproyectoDataGridViewTextBoxColumn,
-            this.observacionDataGridViewTextBoxColumn,
-            this.fechainicialDataGridViewTextBoxColumn,
-            this.fechaentregaDataGridViewTextBoxColumn,
-            this.estadoproyectoDataGridViewTextBoxColumn,
-            this.descripcionDataGridViewTextBoxColumn});
-            this.dgvProyectos.DataSource = this.proyectosBindingSource;
             this.dgvProyectos.Location = new System.Drawing.Point(12, 609);
             this.dgvProyectos.Name = "dgvProyectos";
             this.dgvProyectos.RowHeadersWidth = 51;
@@ -88,6 +70,16 @@
             this.dgvProyectos.Size = new System.Drawing.Size(862, 175);
             this.dgvProyectos.TabIndex = 0;
             this.dgvProyectos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProyectos_CellContentClick);
+            // 
+            // proyectosBindingSource
+            // 
+            this.proyectosBindingSource.DataMember = "proyectos";
+            this.proyectosBindingSource.DataSource = this.starGetsDataSet;
+            // 
+            // starGetsDataSet
+            // 
+            this.starGetsDataSet.DataSetName = "StarGetsDataSet";
+            this.starGetsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtNombre
             // 
@@ -270,95 +262,33 @@
             this.lblNombreProyectos.TabIndex = 20;
             this.lblNombreProyectos.Text = "Proyectos";
             // 
-            // starGetsDataSet
-            // 
-            this.starGetsDataSet.DataSetName = "StarGetsDataSet";
-            this.starGetsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // starGetsDataSetBindingSource
             // 
             this.starGetsDataSetBindingSource.DataSource = this.starGetsDataSet;
             this.starGetsDataSetBindingSource.Position = 0;
             // 
-            // proyectosBindingSource
-            // 
-            this.proyectosBindingSource.DataMember = "proyectos";
-            this.proyectosBindingSource.DataSource = this.starGetsDataSet;
-            // 
             // proyectosTableAdapter
             // 
             this.proyectosTableAdapter.ClearBeforeFill = true;
             // 
-            // idproyectoDataGridViewTextBoxColumn
+            // btnLimpiar
             // 
-            this.idproyectoDataGridViewTextBoxColumn.DataPropertyName = "id_proyecto";
-            this.idproyectoDataGridViewTextBoxColumn.HeaderText = "id_proyecto";
-            this.idproyectoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idproyectoDataGridViewTextBoxColumn.Name = "idproyectoDataGridViewTextBoxColumn";
-            this.idproyectoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idproyectoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // iddepartamentoDataGridViewTextBoxColumn
-            // 
-            this.iddepartamentoDataGridViewTextBoxColumn.DataPropertyName = "id_departamento";
-            this.iddepartamentoDataGridViewTextBoxColumn.HeaderText = "id_departamento";
-            this.iddepartamentoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iddepartamentoDataGridViewTextBoxColumn.Name = "iddepartamentoDataGridViewTextBoxColumn";
-            this.iddepartamentoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nombreproyectoDataGridViewTextBoxColumn
-            // 
-            this.nombreproyectoDataGridViewTextBoxColumn.DataPropertyName = "nombre_proyecto";
-            this.nombreproyectoDataGridViewTextBoxColumn.HeaderText = "nombre_proyecto";
-            this.nombreproyectoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreproyectoDataGridViewTextBoxColumn.Name = "nombreproyectoDataGridViewTextBoxColumn";
-            this.nombreproyectoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // observacionDataGridViewTextBoxColumn
-            // 
-            this.observacionDataGridViewTextBoxColumn.DataPropertyName = "observacion";
-            this.observacionDataGridViewTextBoxColumn.HeaderText = "observacion";
-            this.observacionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.observacionDataGridViewTextBoxColumn.Name = "observacionDataGridViewTextBoxColumn";
-            this.observacionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fechainicialDataGridViewTextBoxColumn
-            // 
-            this.fechainicialDataGridViewTextBoxColumn.DataPropertyName = "fecha_inicial";
-            this.fechainicialDataGridViewTextBoxColumn.HeaderText = "fecha_inicial";
-            this.fechainicialDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechainicialDataGridViewTextBoxColumn.Name = "fechainicialDataGridViewTextBoxColumn";
-            this.fechainicialDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fechaentregaDataGridViewTextBoxColumn
-            // 
-            this.fechaentregaDataGridViewTextBoxColumn.DataPropertyName = "fecha_entrega";
-            this.fechaentregaDataGridViewTextBoxColumn.HeaderText = "fecha_entrega";
-            this.fechaentregaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaentregaDataGridViewTextBoxColumn.Name = "fechaentregaDataGridViewTextBoxColumn";
-            this.fechaentregaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // estadoproyectoDataGridViewTextBoxColumn
-            // 
-            this.estadoproyectoDataGridViewTextBoxColumn.DataPropertyName = "estado_proyecto";
-            this.estadoproyectoDataGridViewTextBoxColumn.HeaderText = "estado_proyecto";
-            this.estadoproyectoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estadoproyectoDataGridViewTextBoxColumn.Name = "estadoproyectoDataGridViewTextBoxColumn";
-            this.estadoproyectoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.Width = 125;
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(663, 66);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(211, 31);
+            this.btnLimpiar.TabIndex = 21;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // FormProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 796);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblNombreProyectos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -381,11 +311,10 @@
             this.Controls.Add(this.dgvProyectos);
             this.Name = "FormProyectos";
             this.Text = "FormProyectos";
-            this.Load += new System.EventHandler(this.FormProyectos_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proyectosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyectosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,13 +346,6 @@
         private StarGetsDataSet starGetsDataSet;
         private System.Windows.Forms.BindingSource proyectosBindingSource;
         private StarGetsDataSetTableAdapters.proyectosTableAdapter proyectosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idproyectoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iddepartamentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreproyectoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechainicialDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaentregaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoproyectoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

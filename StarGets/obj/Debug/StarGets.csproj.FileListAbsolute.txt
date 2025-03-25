@@ -23,3 +23,7 @@ C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.csproj.GenerateResource.cach
 C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.csproj.CoreCompileInputs.cache
 C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.exe
 C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.pdb
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormMisActividades.resources
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormEmpleados.resources
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormDepartamentos.resources
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormVerAvance.resources

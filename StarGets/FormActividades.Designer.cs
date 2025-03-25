@@ -48,25 +48,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvActividades = new System.Windows.Forms.DataGridView();
+            this.actividadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.starGetsDataSet = new StarGets.StarGetsDataSet();
             this.starGetsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.txtArchivo = new System.Windows.Forms.TextBox();
-            this.actividadesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.actividadesTableAdapter = new StarGets.StarGetsDataSetTableAdapters.actividadesTableAdapter();
-            this.idactividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idproyectoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreactividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechainicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaentregaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urlarchivoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actividadesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbProyecto
@@ -139,6 +130,7 @@
             this.btnActualizar.TabIndex = 9;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
@@ -148,6 +140,7 @@
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnLimpiar
             // 
@@ -224,26 +217,19 @@
             // 
             // dgvActividades
             // 
-            this.dgvActividades.AutoGenerateColumns = false;
             this.dgvActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvActividades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idactividadDataGridViewTextBoxColumn,
-            this.idproyectoDataGridViewTextBoxColumn,
-            this.idempleadoDataGridViewTextBoxColumn,
-            this.nombreactividadDataGridViewTextBoxColumn,
-            this.fechainicioDataGridViewTextBoxColumn,
-            this.fechaentregaDataGridViewTextBoxColumn,
-            this.descripcionDataGridViewTextBoxColumn,
-            this.estadoDataGridViewTextBoxColumn,
-            this.urlarchivoDataGridViewTextBoxColumn});
-            this.dgvActividades.DataSource = this.actividadesBindingSource;
-            this.dgvActividades.Location = new System.Drawing.Point(547, 13);
+            this.dgvActividades.Location = new System.Drawing.Point(547, 12);
             this.dgvActividades.Name = "dgvActividades";
             this.dgvActividades.RowHeadersWidth = 51;
             this.dgvActividades.RowTemplate.Height = 24;
             this.dgvActividades.Size = new System.Drawing.Size(339, 321);
             this.dgvActividades.TabIndex = 19;
             this.dgvActividades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvActividades_CellContentClick);
+            // 
+            // actividadesBindingSource
+            // 
+            this.actividadesBindingSource.DataMember = "actividades";
+            this.actividadesBindingSource.DataSource = this.starGetsDataSet;
             // 
             // starGetsDataSet
             // 
@@ -271,87 +257,9 @@
             this.txtArchivo.Size = new System.Drawing.Size(205, 22);
             this.txtArchivo.TabIndex = 21;
             // 
-            // actividadesBindingSource
-            // 
-            this.actividadesBindingSource.DataMember = "actividades";
-            this.actividadesBindingSource.DataSource = this.starGetsDataSet;
-            // 
             // actividadesTableAdapter
             // 
             this.actividadesTableAdapter.ClearBeforeFill = true;
-            // 
-            // idactividadDataGridViewTextBoxColumn
-            // 
-            this.idactividadDataGridViewTextBoxColumn.DataPropertyName = "id_actividad";
-            this.idactividadDataGridViewTextBoxColumn.HeaderText = "id_actividad";
-            this.idactividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idactividadDataGridViewTextBoxColumn.Name = "idactividadDataGridViewTextBoxColumn";
-            this.idactividadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idactividadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idproyectoDataGridViewTextBoxColumn
-            // 
-            this.idproyectoDataGridViewTextBoxColumn.DataPropertyName = "id_proyecto";
-            this.idproyectoDataGridViewTextBoxColumn.HeaderText = "id_proyecto";
-            this.idproyectoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idproyectoDataGridViewTextBoxColumn.Name = "idproyectoDataGridViewTextBoxColumn";
-            this.idproyectoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // idempleadoDataGridViewTextBoxColumn
-            // 
-            this.idempleadoDataGridViewTextBoxColumn.DataPropertyName = "id_empleado";
-            this.idempleadoDataGridViewTextBoxColumn.HeaderText = "id_empleado";
-            this.idempleadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idempleadoDataGridViewTextBoxColumn.Name = "idempleadoDataGridViewTextBoxColumn";
-            this.idempleadoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nombreactividadDataGridViewTextBoxColumn
-            // 
-            this.nombreactividadDataGridViewTextBoxColumn.DataPropertyName = "nombre_actividad";
-            this.nombreactividadDataGridViewTextBoxColumn.HeaderText = "nombre_actividad";
-            this.nombreactividadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombreactividadDataGridViewTextBoxColumn.Name = "nombreactividadDataGridViewTextBoxColumn";
-            this.nombreactividadDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fechainicioDataGridViewTextBoxColumn
-            // 
-            this.fechainicioDataGridViewTextBoxColumn.DataPropertyName = "fecha_inicio";
-            this.fechainicioDataGridViewTextBoxColumn.HeaderText = "fecha_inicio";
-            this.fechainicioDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechainicioDataGridViewTextBoxColumn.Name = "fechainicioDataGridViewTextBoxColumn";
-            this.fechainicioDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // fechaentregaDataGridViewTextBoxColumn
-            // 
-            this.fechaentregaDataGridViewTextBoxColumn.DataPropertyName = "fecha_entrega";
-            this.fechaentregaDataGridViewTextBoxColumn.HeaderText = "fecha_entrega";
-            this.fechaentregaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fechaentregaDataGridViewTextBoxColumn.Name = "fechaentregaDataGridViewTextBoxColumn";
-            this.fechaentregaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "descripcion";
-            this.descripcionDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // estadoDataGridViewTextBoxColumn
-            // 
-            this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
-            this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
-            this.estadoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
-            this.estadoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // urlarchivoDataGridViewTextBoxColumn
-            // 
-            this.urlarchivoDataGridViewTextBoxColumn.DataPropertyName = "url_archivo";
-            this.urlarchivoDataGridViewTextBoxColumn.HeaderText = "url_archivo";
-            this.urlarchivoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.urlarchivoDataGridViewTextBoxColumn.Name = "urlarchivoDataGridViewTextBoxColumn";
-            this.urlarchivoDataGridViewTextBoxColumn.Width = 125;
             // 
             // FormActividades
             // 
@@ -381,11 +289,10 @@
             this.Controls.Add(this.cbProyecto);
             this.Name = "FormActividades";
             this.Text = "FormActividades";
-            this.Load += new System.EventHandler(this.FormActividades_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvActividades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actividadesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,14 +325,5 @@
         private System.Windows.Forms.TextBox txtArchivo;
         private System.Windows.Forms.BindingSource actividadesBindingSource;
         private StarGetsDataSetTableAdapters.actividadesTableAdapter actividadesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idactividadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idproyectoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idempleadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreactividadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechainicioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaentregaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urlarchivoDataGridViewTextBoxColumn;
     }
 }

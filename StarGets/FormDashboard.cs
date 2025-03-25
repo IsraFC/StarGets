@@ -19,10 +19,7 @@ namespace StarGets
             InitializeComponent();
             this.usuario = usuario;
             this.rol = rol;
-        }
 
-        private void FormDashboard_Load(object sender, EventArgs e)
-        {
             lblBienvenida.Text = "Bienvenido, " + usuario;
             lblRol.Text = "Rol: " + rol;
 

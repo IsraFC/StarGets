@@ -18,10 +18,7 @@ namespace StarGets
         public FormActividades()
         {
             InitializeComponent();
-        }
 
-        private void FormActividades_Load(object sender, EventArgs e)
-        {
             CargarProyectos();
             CargarColaboradores();
             CargarActividades();
@@ -92,6 +89,79 @@ namespace StarGets
             }
         }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombreActividad.Clear();
+            txtDescripcion.Clear();
+            txtArchivo.Clear();
+            cbProyecto.SelectedIndex = -1;
+            cbColaborador.SelectedIndex = -1;
+            cbEstado.SelectedIndex = -1;
+            dtpInicio.Value = DateTime.Now;
+            dtpEntrega.Value = DateTime.Now;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (cbProyecto.SelectedItem == null || cbColaborador.SelectedItem == null || cbEstado.SelectedItem == null)
+            {
+                MessageBox.Show("Completa todos los campos.");
+                return;
+            }
+
+            int idProyecto = (int)((dynamic)cbProyecto.SelectedItem).Value;
+            int idColaborador = (int)((dynamic)cbColaborador.SelectedItem).Value;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"
+                    insert into actividades (id_proyecto, id_empleado, nombre_actividad, fecha_inicio, fecha_entrega, descripcion, estado, url_archivo)
+                    values (@id_proyecto, @id_empleado, @nombre, @inicio, @entrega, @descripcion, @estado, @archivo)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id_proyecto", idProyecto);
+                cmd.Parameters.AddWithValue("@id_empleado", idColaborador);
+                cmd.Parameters.AddWithValue("@nombre", txtNombreActividad.Text);
+                cmd.Parameters.AddWithValue("@inicio", dtpInicio.Value);
+                cmd.Parameters.AddWithValue("@entrega", dtpEntrega.Value);
+                cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
+                cmd.Parameters.AddWithValue("@estado", cbEstado.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@archivo", txtArchivo.Text);
+                cmd.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Actividad agregada.");
+            CargarActividades();
+            LimpiarCampos();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvActividades.CurrentRow == null)
+            {
+                MessageBox.Show("Selecciona una actividad para eliminar.");
+                return;
+            }
+
+            int idActividad = Convert.ToInt32(dgvActividades.CurrentRow.Cells[0].Value);
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete from actividades where id_actividad = @id", conn);
+                cmd.Parameters.AddWithValue("@id", idActividad);
+                cmd.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Actividad eliminada.");
+            CargarActividades();
+            LimpiarCampos();
+        }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
@@ -101,7 +171,7 @@ namespace StarGets
                 return;
             }
 
-            int idActividad = Convert.ToInt32(dgvActividades.CurrentRow.Cells["id_actividad"].Value);
+            int idActividad = Convert.ToInt32(dgvActividades.CurrentRow.Cells[0].Value);
             int idProyecto = (int)((dynamic)cbProyecto.SelectedItem).Value;
             int idColaborador = (int)((dynamic)cbColaborador.SelectedItem).Value;
 
@@ -137,55 +207,6 @@ namespace StarGets
             LimpiarCampos();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dgvActividades.CurrentRow == null)
-            {
-                MessageBox.Show("Selecciona una actividad para eliminar.");
-                return;
-            }
-
-            int idActividad = Convert.ToInt32(dgvActividades.CurrentRow.Cells["id_actividad"].Value);
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("delete from actividades where id_actividad = @id", conn);
-                cmd.Parameters.AddWithValue("@id", idActividad);
-                cmd.ExecuteNonQuery();
-            }
-
-            MessageBox.Show("Actividad eliminada.");
-            CargarActividades();
-            LimpiarCampos();
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-        }
-
-        private void LimpiarCampos()
-        {
-            txtNombreActividad.Clear();
-            txtDescripcion.Clear();
-            txtArchivo.Clear();
-            cbProyecto.SelectedIndex = -1;
-            cbColaborador.SelectedIndex = -1;
-            cbEstado.SelectedIndex = -1;
-            dtpInicio.Value = DateTime.Now;
-            dtpEntrega.Value = DateTime.Now;
-        }
-
-
-
-        private void FormActividades_Load_1(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'starGetsDataSet.actividades' Puede moverla o quitarla según sea necesario.
-            this.actividadesTableAdapter.Fill(this.starGetsDataSet.actividades);
-
-        }
-
         private void dgvActividades_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -197,41 +218,28 @@ namespace StarGets
                 dtpInicio.Value = Convert.ToDateTime(row.Cells[4].Value);
                 dtpEntrega.Value = Convert.ToDateTime(row.Cells[5].Value);
                 cbEstado.SelectedItem = row.Cells[7].Value.ToString();
+
+                int idProyecto = Convert.ToInt32(row.Cells[1].Value);
+                int idColaborador = Convert.ToInt32(row.Cells[2].Value);
+
+                foreach (var item in cbProyecto.Items)
+                {
+                    if (((dynamic)item).Value == idProyecto)
+                    {
+                        cbProyecto.SelectedItem = item;
+                        break;
+                    }
+                }
+
+                foreach (var item in cbColaborador.Items)
+                {
+                    if (((dynamic)item).Value == idColaborador)
+                    {
+                        cbColaborador.SelectedItem = item;
+                        break;
+                    }
+                }
             }
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if (cbProyecto.SelectedItem == null || cbColaborador.SelectedItem == null || cbEstado.SelectedItem == null)
-            {
-                MessageBox.Show("Completa todos los campos.");
-                return;
-            }
-
-            int idProyecto = (int)((dynamic)cbProyecto.SelectedItem).Value;
-            int idColaborador = (int)((dynamic)cbColaborador.SelectedItem).Value;
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                string query = @"
-                    insert into actividades (id_proyecto, id_empleado, nombre_actividad, fecha_inicio, fecha_entrega, descripcion, estado, url_archivo)
-                    values (@id_proyecto, @id_empleado, @nombre, @inicio, @entrega, @descripcion, @estado, @archivo)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id_proyecto", idProyecto);
-                cmd.Parameters.AddWithValue("@id_empleado", idColaborador);
-                cmd.Parameters.AddWithValue("@nombre", txtNombreActividad.Text);
-                cmd.Parameters.AddWithValue("@inicio", dtpInicio.Value);
-                cmd.Parameters.AddWithValue("@entrega", dtpEntrega.Value);
-                cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
-                cmd.Parameters.AddWithValue("@estado", cbEstado.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@archivo", txtArchivo.Text);
-                cmd.ExecuteNonQuery();
-            }
-
-            MessageBox.Show("Actividad agregada.");
-            CargarActividades();
-            LimpiarCampos();
         }
     }
 }
