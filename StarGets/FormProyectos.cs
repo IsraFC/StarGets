@@ -13,7 +13,7 @@ namespace StarGets
 {
     public partial class FormProyectos: Form
     {
-        string connectionString = "Server=localhost;Database=nombre_de_tu_bd;Trusted_Connection=True;";
+        string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=StarGets;Integrated Security=True;Encrypt=FalseData Source=localhost\\SQLEXPRESS;Initial Catalog=StarGets;Integrated Security=True;Encrypt=False";
 
         public FormProyectos()
         {
@@ -176,15 +176,22 @@ namespace StarGets
             {
                 DataGridViewRow row = dgvProyectos.Rows[e.RowIndex];
 
-                txtNombre.Text = row.Cells["nombre_proyecto"].Value.ToString();
-                txtObservacion.Text = row.Cells["observacion"].Value.ToString();
-                dtpInicio.Value = Convert.ToDateTime(row.Cells["fecha_inicial"].Value);
-                dtpEntrega.Value = Convert.ToDateTime(row.Cells["fecha_entrega"].Value);
-                txtEstado.Text = row.Cells["estado_proyecto"].Value.ToString();
-                txtDescripcion.Text = row.Cells["descripcion"].Value.ToString();
+                txtNombre.Text = row.Cells[2].Value.ToString();
+                txtObservacion.Text = row.Cells[3].Value.ToString();
+                dtpInicio.Value = Convert.ToDateTime(row.Cells[4].Value);
+                dtpEntrega.Value = Convert.ToDateTime(row.Cells[5].Value);
+                txtEstado.Text = row.Cells[6].Value.ToString();
+                txtDescripcion.Text = row.Cells[7].Value.ToString();
 
                 // Puedes buscar el departamento en cbDepartamento si deseas
             }
+        }
+
+        private void FormProyectos_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'starGetsDataSet.proyectos' Puede moverla o quitarla según sea necesario.
+            this.proyectosTableAdapter.Fill(this.starGetsDataSet.proyectos);
+
         }
     }
 }

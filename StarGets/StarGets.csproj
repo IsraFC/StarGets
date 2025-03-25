@@ -106,6 +106,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StarGetsDataSet1.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormActividades.resx">
+      <DependentUpon>FormActividades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>

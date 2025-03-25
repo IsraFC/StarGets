@@ -10,3 +10,16 @@ C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.csproj.CoreCompileInputs.cac
 C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.exe
 C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.pdb
 C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.FormProyectos.resources
+C:\Users\varko\StarGets\StarGets\bin\Debug\StarGets.exe.config
+C:\Users\varko\StarGets\StarGets\bin\Debug\StarGets.exe
+C:\Users\varko\StarGets\StarGets\bin\Debug\StarGets.pdb
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.csproj.AssemblyReference.cache
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormActividades.resources
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormDashboard.resources
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormLogin.resources
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormProyectos.resources
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.Properties.Resources.resources
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.csproj.GenerateResource.cache
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.csproj.CoreCompileInputs.cache
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.exe
+C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.pdb
