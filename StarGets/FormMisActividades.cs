@@ -150,5 +150,14 @@ namespace StarGets
             return esValido;
         }
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormDashboard dashboard = Application.OpenForms["FormDashboard"] as FormDashboard;
+            if (dashboard != null)
+            {
+                dashboard.Show();
+            }
+        }
     }
 }

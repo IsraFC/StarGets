@@ -50,24 +50,27 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblNombreProyectos = new System.Windows.Forms.Label();
             this.starGetsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proyectosTableAdapter = new StarGets.StarGetsDataSetTableAdapters.proyectosTableAdapter();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblProyectos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProyectos
             // 
             this.dgvProyectos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProyectos.Location = new System.Drawing.Point(12, 609);
+            this.dgvProyectos.Location = new System.Drawing.Point(18, 458);
             this.dgvProyectos.Name = "dgvProyectos";
             this.dgvProyectos.RowHeadersWidth = 51;
             this.dgvProyectos.RowTemplate.Height = 24;
-            this.dgvProyectos.Size = new System.Drawing.Size(862, 175);
+            this.dgvProyectos.Size = new System.Drawing.Size(877, 175);
             this.dgvProyectos.TabIndex = 0;
             this.dgvProyectos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProyectos_CellContentClick);
             // 
@@ -83,7 +86,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(127, 136);
+            this.txtNombre.Location = new System.Drawing.Point(149, 135);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 22);
             this.txtNombre.TabIndex = 1;
@@ -91,21 +94,21 @@
             // cbDepartamento
             // 
             this.cbDepartamento.FormattingEnabled = true;
-            this.cbDepartamento.Location = new System.Drawing.Point(127, 174);
+            this.cbDepartamento.Location = new System.Drawing.Point(149, 174);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(200, 24);
             this.cbDepartamento.TabIndex = 2;
             // 
             // dtpInicio
             // 
-            this.dtpInicio.Location = new System.Drawing.Point(127, 223);
+            this.dtpInicio.Location = new System.Drawing.Point(149, 223);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(200, 22);
             this.dtpInicio.TabIndex = 3;
             // 
             // dtpEntrega
             // 
-            this.dtpEntrega.Location = new System.Drawing.Point(491, 223);
+            this.dtpEntrega.Location = new System.Drawing.Point(149, 306);
             this.dtpEntrega.Name = "dtpEntrega";
             this.dtpEntrega.Size = new System.Drawing.Size(200, 22);
             this.dtpEntrega.TabIndex = 4;
@@ -144,7 +147,7 @@
             // 
             this.lblFechaEtrega.AutoSize = true;
             this.lblFechaEtrega.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaEtrega.Location = new System.Drawing.Point(339, 226);
+            this.lblFechaEtrega.Location = new System.Drawing.Point(12, 306);
             this.lblFechaEtrega.Name = "lblFechaEtrega";
             this.lblFechaEtrega.Size = new System.Drawing.Size(128, 18);
             this.lblFechaEtrega.TabIndex = 8;
@@ -154,7 +157,7 @@
             // 
             this.lblEstadoProyecto.AutoSize = true;
             this.lblEstadoProyecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoProyecto.Location = new System.Drawing.Point(15, 262);
+            this.lblEstadoProyecto.Location = new System.Drawing.Point(15, 266);
             this.lblEstadoProyecto.Name = "lblEstadoProyecto";
             this.lblEstadoProyecto.Size = new System.Drawing.Size(59, 18);
             this.lblEstadoProyecto.TabIndex = 9;
@@ -162,7 +165,7 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(127, 261);
+            this.txtEstado.Location = new System.Drawing.Point(149, 262);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(200, 22);
             this.txtEstado.TabIndex = 10;
@@ -171,7 +174,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(15, 304);
+            this.lblDescripcion.Location = new System.Drawing.Point(411, 136);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(91, 18);
             this.lblDescripcion.TabIndex = 11;
@@ -182,17 +185,17 @@
             this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescripcion.Location = new System.Drawing.Point(127, 300);
+            this.txtDescripcion.Location = new System.Drawing.Point(538, 135);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(564, 115);
+            this.txtDescripcion.Size = new System.Drawing.Size(366, 106);
             this.txtDescripcion.TabIndex = 12;
             // 
             // lblObservaciones
             // 
             this.lblObservaciones.AutoSize = true;
             this.lblObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservaciones.Location = new System.Drawing.Point(15, 455);
+            this.lblObservaciones.Location = new System.Drawing.Point(411, 277);
             this.lblObservaciones.Name = "lblObservaciones";
             this.lblObservaciones.Size = new System.Drawing.Size(112, 18);
             this.lblObservaciones.TabIndex = 13;
@@ -200,17 +203,17 @@
             // 
             // txtObservacion
             // 
-            this.txtObservacion.Location = new System.Drawing.Point(127, 447);
+            this.txtObservacion.Location = new System.Drawing.Point(538, 276);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(564, 104);
+            this.txtObservacion.Size = new System.Drawing.Size(366, 104);
             this.txtObservacion.TabIndex = 14;
             // 
             // lblListaProyectos
             // 
             this.lblListaProyectos.AutoSize = true;
             this.lblListaProyectos.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaProyectos.Location = new System.Drawing.Point(9, 574);
+            this.lblListaProyectos.Location = new System.Drawing.Point(14, 422);
             this.lblListaProyectos.Name = "lblListaProyectos";
             this.lblListaProyectos.Size = new System.Drawing.Size(149, 19);
             this.lblListaProyectos.TabIndex = 15;
@@ -252,16 +255,6 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lblNombreProyectos
-            // 
-            this.lblNombreProyectos.AutoSize = true;
-            this.lblNombreProyectos.Font = new System.Drawing.Font("Microsoft JhengHei", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreProyectos.Location = new System.Drawing.Point(12, 9);
-            this.lblNombreProyectos.Name = "lblNombreProyectos";
-            this.lblNombreProyectos.Size = new System.Drawing.Size(149, 36);
-            this.lblNombreProyectos.TabIndex = 20;
-            this.lblNombreProyectos.Text = "Proyectos";
-            // 
             // starGetsDataSetBindingSource
             // 
             this.starGetsDataSetBindingSource.DataSource = this.starGetsDataSet;
@@ -283,13 +276,47 @@
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(843, 676);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(119, 32);
+            this.btnRegresar.TabIndex = 24;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::StarGets.Properties.Resources.proyect;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(38, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lblProyectos
+            // 
+            this.lblProyectos.AutoSize = true;
+            this.lblProyectos.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProyectos.Location = new System.Drawing.Point(56, 12);
+            this.lblProyectos.Name = "lblProyectos";
+            this.lblProyectos.Size = new System.Drawing.Size(155, 37);
+            this.lblProyectos.TabIndex = 26;
+            this.lblProyectos.Text = "Proyectos";
+            // 
             // FormProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 796);
+            this.ClientSize = new System.Drawing.Size(974, 720);
+            this.Controls.Add(this.lblProyectos);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.lblNombreProyectos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregar);
@@ -315,6 +342,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.proyectosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,11 +369,13 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label lblNombreProyectos;
         private System.Windows.Forms.BindingSource starGetsDataSetBindingSource;
         private StarGetsDataSet starGetsDataSet;
         private System.Windows.Forms.BindingSource proyectosBindingSource;
         private StarGetsDataSetTableAdapters.proyectosTableAdapter proyectosTableAdapter;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblProyectos;
     }
 }

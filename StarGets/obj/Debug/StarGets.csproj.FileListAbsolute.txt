@@ -27,3 +27,8 @@ C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormMisActividades.resources
 C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormEmpleados.resources
 C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormDepartamentos.resources
 C:\Users\varko\StarGets\StarGets\obj\Debug\StarGets.FormVerAvance.resources
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.FormActividades.resources
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.FormDepartamentos.resources
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.FormEmpleados.resources
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.FormMisActividades.resources
+C:\Users\campo\StarGets\StarGets\obj\Debug\StarGets.FormVerAvance.resources

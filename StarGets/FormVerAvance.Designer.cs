@@ -42,57 +42,65 @@
             this.lblResumen = new System.Windows.Forms.Label();
             this.dgvAvance = new System.Windows.Forms.DataGridView();
             this.starGetsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.lblAvances = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // cbFiltro
             // 
             this.cbFiltro.FormattingEnabled = true;
-            this.cbFiltro.Location = new System.Drawing.Point(201, 12);
+            this.cbFiltro.Location = new System.Drawing.Point(273, 76);
             this.cbFiltro.Name = "cbFiltro";
-            this.cbFiltro.Size = new System.Drawing.Size(158, 24);
+            this.cbFiltro.Size = new System.Drawing.Size(209, 24);
             this.cbFiltro.TabIndex = 0;
             this.cbFiltro.SelectedIndexChanged += new System.EventHandler(this.cbFiltro_SelectedIndexChanged);
             // 
             // cbOpciones
             // 
             this.cbOpciones.FormattingEnabled = true;
-            this.cbOpciones.Location = new System.Drawing.Point(238, 56);
+            this.cbOpciones.Location = new System.Drawing.Point(273, 120);
             this.cbOpciones.Name = "cbOpciones";
-            this.cbOpciones.Size = new System.Drawing.Size(121, 24);
+            this.cbOpciones.Size = new System.Drawing.Size(209, 24);
             this.cbOpciones.TabIndex = 1;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(135, 106);
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(382, 162);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 16);
+            this.label1.Size = new System.Drawing.Size(179, 18);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Selección de tipo de vista";
+            this.label1.Text = "Selección de tipo de vista:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 59);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 16);
+            this.label2.Size = new System.Drawing.Size(246, 18);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Lista de proyectos o colaboradores";
+            this.label2.Text = "Lista de proyectos o colaboradores:";
             // 
             // empleadosBindingSource
             // 
@@ -120,7 +128,7 @@
             // lblResumen
             // 
             this.lblResumen.AutoSize = true;
-            this.lblResumen.Location = new System.Drawing.Point(406, 15);
+            this.lblResumen.Location = new System.Drawing.Point(403, 77);
             this.lblResumen.Name = "lblResumen";
             this.lblResumen.Size = new System.Drawing.Size(0, 16);
             this.lblResumen.TabIndex = 6;
@@ -128,7 +136,7 @@
             // dgvAvance
             // 
             this.dgvAvance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvance.Location = new System.Drawing.Point(15, 144);
+            this.dgvAvance.Location = new System.Drawing.Point(12, 210);
             this.dgvAvance.Name = "dgvAvance";
             this.dgvAvance.RowHeadersWidth = 51;
             this.dgvAvance.RowTemplate.Height = 24;
@@ -140,11 +148,46 @@
             this.starGetsDataSetBindingSource.DataSource = this.starGetsDataSet;
             this.starGetsDataSetBindingSource.Position = 0;
             // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(599, 448);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(119, 32);
+            this.btnRegresar.TabIndex = 24;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // lblAvances
+            // 
+            this.lblAvances.AutoSize = true;
+            this.lblAvances.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvances.Location = new System.Drawing.Point(61, 9);
+            this.lblAvances.Name = "lblAvances";
+            this.lblAvances.Size = new System.Drawing.Size(371, 37);
+            this.lblAvances.TabIndex = 25;
+            this.lblAvances.Text = "Ver Avances del Proyecto";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::StarGets.Properties.Resources.progress;
+            this.pictureBox6.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(43, 36);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 26;
+            this.pictureBox6.TabStop = false;
+            // 
             // FormVerAvance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 317);
+            this.ClientSize = new System.Drawing.Size(730, 492);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.lblAvances);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.dgvAvance);
             this.Controls.Add(this.lblResumen);
             this.Controls.Add(this.label2);
@@ -159,6 +202,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.proyectosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +223,8 @@
         private System.Windows.Forms.Label lblResumen;
         private System.Windows.Forms.DataGridView dgvAvance;
         private System.Windows.Forms.BindingSource starGetsDataSetBindingSource;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Label lblAvances;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
