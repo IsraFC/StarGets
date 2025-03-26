@@ -22,6 +22,7 @@ namespace StarGets
 
             CargarDepartamentos();
             CargarProyectos();
+            cbEstado.Items.AddRange(new string[] { "inicio", "en proceso", "activo" });
         }
 
         private void CargarProyectos()
@@ -84,7 +85,7 @@ namespace StarGets
                 cmd.Parameters.AddWithValue("@observacion", txtObservacion.Text);
                 cmd.Parameters.AddWithValue("@inicio", dtpInicio.Value);
                 cmd.Parameters.AddWithValue("@entrega", dtpEntrega.Value);
-                cmd.Parameters.AddWithValue("@estado", txtEstado.Text);
+                cmd.Parameters.AddWithValue("@estado", cbEstado.Text);
                 cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
                 cmd.ExecuteNonQuery();
             }
@@ -126,7 +127,7 @@ namespace StarGets
                 cmd.Parameters.AddWithValue("@observacion", txtObservacion.Text);
                 cmd.Parameters.AddWithValue("@inicio", dtpInicio.Value);
                 cmd.Parameters.AddWithValue("@entrega", dtpEntrega.Value);
-                cmd.Parameters.AddWithValue("@estado", txtEstado.Text);
+                cmd.Parameters.AddWithValue("@estado", cbEstado.Text);
                 cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
                 cmd.Parameters.AddWithValue("@id_proyecto", idProyecto);
                 cmd.ExecuteNonQuery();
@@ -163,7 +164,7 @@ namespace StarGets
         private void LimpiarCampos()
         {
             txtNombre.Clear();
-            txtEstado.Clear();
+            cbEstado.SelectedIndex = -1;
             txtDescripcion.Clear();
             txtObservacion.Clear();
             cbDepartamento.SelectedIndex = -1;
@@ -182,7 +183,7 @@ namespace StarGets
                 txtObservacion.Text = row.Cells[3].Value.ToString();
                 dtpInicio.Value = Convert.ToDateTime(row.Cells[4].Value);
                 dtpEntrega.Value = Convert.ToDateTime(row.Cells[5].Value);
-                txtEstado.Text = row.Cells[6].Value.ToString();
+                cbEstado.Text = row.Cells[6].Value.ToString();
                 txtDescripcion.Text = row.Cells[7].Value.ToString();
 
                 int idDepartamento = Convert.ToInt32(row.Cells[1].Value);
@@ -227,13 +228,13 @@ namespace StarGets
             else txtObservacion.BackColor = Color.White;
 
             // Estado del proyecto
-            if (!Regex.IsMatch(txtEstado.Text.Trim(), @"^(inicio|en proceso|finalizado)$"))
+            if (!Regex.IsMatch(cbEstado.Text.Trim(), @"^(inicio|en proceso|finalizado)$"))
             {
-                txtEstado.BackColor = Color.LightPink;
+                cbEstado.BackColor = Color.LightPink;
                 mensaje += "\n- Estado inválido. Usa: inicio, en proceso o finalizado.";
                 esValido = false;
             }
-            else txtEstado.BackColor = Color.White;
+            else cbEstado.BackColor = Color.White;
 
             // Descripción
             if (!Regex.IsMatch(txtDescripcion.Text.Trim(), @"^.{5,}$"))

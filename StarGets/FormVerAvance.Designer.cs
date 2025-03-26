@@ -128,10 +128,11 @@
             // lblResumen
             // 
             this.lblResumen.AutoSize = true;
-            this.lblResumen.Location = new System.Drawing.Point(403, 77);
+            this.lblResumen.Location = new System.Drawing.Point(12, 191);
             this.lblResumen.Name = "lblResumen";
-            this.lblResumen.Size = new System.Drawing.Size(0, 16);
+            this.lblResumen.Size = new System.Drawing.Size(95, 16);
             this.lblResumen.TabIndex = 6;
+            this.lblResumen.Text = "labelResuman";
             // 
             // dgvAvance
             // 

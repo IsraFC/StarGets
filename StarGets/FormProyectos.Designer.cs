@@ -41,7 +41,6 @@
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.lblFechaEtrega = new System.Windows.Forms.Label();
             this.lblEstadoProyecto = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblObservaciones = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblProyectos = new System.Windows.Forms.Label();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyectos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).BeginInit();
@@ -162,13 +162,6 @@
             this.lblEstadoProyecto.Size = new System.Drawing.Size(59, 18);
             this.lblEstadoProyecto.TabIndex = 9;
             this.lblEstadoProyecto.Text = "Estado:";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(149, 262);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(200, 22);
-            this.txtEstado.TabIndex = 10;
             // 
             // lblDescripcion
             // 
@@ -308,11 +301,20 @@
             this.lblProyectos.TabIndex = 26;
             this.lblProyectos.Text = "Proyectos";
             // 
+            // cbEstado
+            // 
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(149, 265);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(200, 24);
+            this.cbEstado.TabIndex = 27;
+            // 
             // FormProyectos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 720);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.lblProyectos);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnRegresar);
@@ -325,7 +327,6 @@
             this.Controls.Add(this.lblObservaciones);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.lblEstadoProyecto);
             this.Controls.Add(this.lblFechaEtrega);
             this.Controls.Add(this.lblFechaInicio);
@@ -360,7 +361,6 @@
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.Label lblFechaEtrega;
         private System.Windows.Forms.Label lblEstadoProyecto;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblObservaciones;
@@ -377,5 +377,6 @@
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblProyectos;
+        private System.Windows.Forms.ComboBox cbEstado;
     }
 }

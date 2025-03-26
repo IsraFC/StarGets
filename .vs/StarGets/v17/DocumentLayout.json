@@ -1,41 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\campo\\StarGets\\",
+  "WorkspaceRootPath": "C:\\Users\\varko\\StarGets\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\campo\\StarGets\\stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\campo\\StarGets\\stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\campo\\StarGets\\stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\campo\\StarGets\\stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\campo\\stargets\\stargets\\formempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formempleados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\campo\\stargets\\stargets\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\campo\\stargets\\stargets\\formactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\campo\\StarGets\\stargets\\formveravance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\stargets\\stargets\\formveravance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formveravance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\campo\\stargets\\stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\stargets\\stargets\\formveravance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formveravance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\StarGets\\stargets\\formactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\StarGets\\stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\StarGets\\stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\StarGets\\stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,63 +34,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormDepartamentos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormDepartamentos.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormDepartamentos.cs",
-              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormDepartamentos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "StarGets\\FormDepartamentos.cs [Dise\u00F1o]",
+              "DocumentIndex": 1,
+              "Title": "FormVerAvance.cs",
+              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormVerAvance.cs",
+              "RelativeDocumentMoniker": "StarGets\\FormVerAvance.cs",
+              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormVerAvance.cs",
+              "RelativeToolTip": "StarGets\\FormVerAvance.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAuwKEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T23:12:20.594Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormEmpleados.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormEmpleados.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormEmpleados.cs",
-              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormEmpleados.cs [Dise\u00F1o]",
-              "RelativeToolTip": "StarGets\\FormEmpleados.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T17:51:49.981Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormLogin.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormLogin.cs",
-              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormLogin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "StarGets\\FormLogin.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T23:13:47.732Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-03-26T18:54:48.595Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormMisActividades.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormMisActividades.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormMisActividades.cs",
-              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormMisActividades.cs [Dise\u00F1o]",
-              "RelativeToolTip": "StarGets\\FormMisActividades.cs [Dise\u00F1o]",
+              "Title": "FormActividades.cs",
+              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormActividades.cs",
+              "RelativeDocumentMoniker": "StarGets\\FormActividades.cs",
+              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormActividades.cs",
+              "RelativeToolTip": "StarGets\\FormActividades.cs",
+              "ViewState": "AgIAAOwAAAAAAAAAAAAUwGcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T23:14:28.275Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-03-26T18:49:27.645Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormProyectos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormProyectos.cs",
+              "DocumentIndex": 3,
+              "Title": "FormProyectos.cs",
+              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormProyectos.cs",
               "RelativeDocumentMoniker": "StarGets\\FormProyectos.cs",
-              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormProyectos.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormProyectos.cs",
+              "RelativeToolTip": "StarGets\\FormProyectos.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwFcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:46:05.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormProyectos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormProyectos.cs",
+              "RelativeDocumentMoniker": "StarGets\\FormProyectos.cs",
+              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormProyectos.cs [Dise\u00F1o]",
               "RelativeToolTip": "StarGets\\FormProyectos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T00:14:29.073Z",
@@ -110,35 +89,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormDashboard.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormDashboard.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormDashboard.cs",
-              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormDashboard.cs [Dise\u00F1o]",
-              "RelativeToolTip": "StarGets\\FormDashboard.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T17:22:45.698Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormActividades.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormActividades.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormActividades.cs",
-              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormActividades.cs [Dise\u00F1o]",
-              "RelativeToolTip": "StarGets\\FormActividades.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T17:12:35.824Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "FormVerAvance.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormVerAvance.cs",
+              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormVerAvance.cs",
               "RelativeDocumentMoniker": "StarGets\\FormVerAvance.cs",
-              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormVerAvance.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormVerAvance.cs [Dise\u00F1o]",
               "RelativeToolTip": "StarGets\\FormVerAvance.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T00:17:02.175Z",
@@ -146,16 +101,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "FormMisActividades.cs",
-              "DocumentMoniker": "C:\\Users\\campo\\StarGets\\StarGets\\FormMisActividades.cs",
+              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormMisActividades.cs",
               "RelativeDocumentMoniker": "StarGets\\FormMisActividades.cs",
-              "ToolTip": "C:\\Users\\campo\\StarGets\\StarGets\\FormMisActividades.cs",
+              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormMisActividades.cs",
               "RelativeToolTip": "StarGets\\FormMisActividades.cs",
               "ViewState": "AgIAAIwAAAAAAAAAAAAWwKAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T18:19:31.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T18:19:31.716Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

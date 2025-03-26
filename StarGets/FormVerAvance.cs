@@ -18,6 +18,7 @@ namespace StarGets
         {
             InitializeComponent();
             cbFiltro.Items.AddRange(new string[] { "Proyecto", "Colaborador" });
+            lblResumen.Text = "";
         }
 
         private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
