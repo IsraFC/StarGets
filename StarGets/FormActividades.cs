@@ -6,10 +6,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Data Source=localhost\\SQLEXPRESS;Initial Catalog=StarGets;Integrated Security=True;Encrypt=False
 namespace StarGets
 {
     public partial class FormActividades: Form
@@ -108,6 +108,8 @@ namespace StarGets
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             if (cbProyecto.SelectedItem == null || cbColaborador.SelectedItem == null || cbEstado.SelectedItem == null)
             {
                 MessageBox.Show("Completa todos los campos.");
@@ -165,6 +167,8 @@ namespace StarGets
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             if (dgvActividades.CurrentRow == null)
             {
                 MessageBox.Show("Selecciona una actividad para actualizar.");
@@ -241,5 +245,88 @@ namespace StarGets
                 }
             }
         }
+
+        private bool ValidarCampos()
+        {
+            bool esValido = true;
+            string mensaje = "Corrige lo siguiente:\n";
+
+            // Nombre de actividad
+            if (!Regex.IsMatch(txtNombreActividad.Text.Trim(), @"^[\w\sáéíóúÁÉÍÓÚñÑ.,-]{3,50}$"))
+            {
+                txtNombreActividad.BackColor = Color.LightPink;
+                mensaje += "\n- Nombre de actividad inválido. Usa solo letras, números y espacios.";
+                esValido = false;
+            }
+            else txtNombreActividad.BackColor = Color.White;
+
+            // Descripción
+            if (!Regex.IsMatch(txtDescripcion.Text.Trim(), @"^.{5,}$"))
+            {
+                txtDescripcion.BackColor = Color.LightPink;
+                mensaje += "\n- Descripción mínima de 5 caracteres.";
+                esValido = false;
+            }
+            else txtDescripcion.BackColor = Color.White;
+
+            // Ruta de archivo (opcional)
+            if (!string.IsNullOrWhiteSpace(txtArchivo.Text) && !Regex.IsMatch(txtArchivo.Text.Trim(), @"^.+\\?.+\..+$"))
+            {
+                txtArchivo.BackColor = Color.LightPink;
+                mensaje += "\n- Ruta de archivo inválida. Debe tener formato válido.";
+                esValido = false;
+            }
+            else txtArchivo.BackColor = Color.White;
+
+            // Proyecto
+            if (cbProyecto.SelectedItem == null)
+            {
+                cbProyecto.BackColor = Color.LightPink;
+                mensaje += "\n- Selecciona un proyecto.";
+                esValido = false;
+            }
+            else cbProyecto.BackColor = Color.White;
+
+            // Colaborador
+            if (cbColaborador.SelectedItem == null)
+            {
+                cbColaborador.BackColor = Color.LightPink;
+                mensaje += "\n- Selecciona un colaborador.";
+                esValido = false;
+            }
+            else cbColaborador.BackColor = Color.White;
+
+            // Estado
+            if (cbEstado.SelectedItem == null)
+            {
+                cbEstado.BackColor = Color.LightPink;
+                mensaje += "\n- Selecciona un estado de la actividad.";
+                esValido = false;
+            }
+            else cbEstado.BackColor = Color.White;
+
+            // Fecha de entrega posterior a inicio
+            if (dtpEntrega.Value <= dtpInicio.Value)
+            {
+                dtpInicio.CalendarMonthBackground = Color.LightPink;
+                dtpEntrega.CalendarMonthBackground = Color.LightPink;
+                mensaje += "\n- La fecha de entrega debe ser posterior a la de inicio.";
+                esValido = false;
+            }
+            else
+            {
+                dtpInicio.CalendarMonthBackground = Color.White;
+                dtpEntrega.CalendarMonthBackground = Color.White;
+            }
+
+            // Si hay errores, mostrar todo junto
+            if (!esValido)
+            {
+                MessageBox.Show(mensaje, "Validación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return esValido;
+        }
+
     }
 }

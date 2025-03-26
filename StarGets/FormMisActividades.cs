@@ -6,10 +6,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Data Source=localhost\\SQLEXPRESS;Initial Catalog=StarGets;Integrated Security=True;Encrypt=False
 namespace StarGets
 {
     public partial class FormMisActividades: Form
@@ -59,6 +59,8 @@ namespace StarGets
 
         private void btnSubirArchivo_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             if (idActividadSeleccionada == -1)
             {
                 MessageBox.Show("Selecciona una actividad primero.");
@@ -109,5 +111,44 @@ namespace StarGets
             txtArchivoNuevo.Clear();
             idActividadSeleccionada = -1;
         }
+
+        private bool ValidarCampos()
+        {
+            bool esValido = true;
+            string mensaje = "Corrige lo siguiente:\n";
+
+            // Estado
+            if (cbEstadoNuevo.SelectedItem == null)
+            {
+                cbEstadoNuevo.BackColor = Color.LightPink;
+                mensaje += "\n- Selecciona un estado.";
+                esValido = false;
+            }
+            else
+            {
+                cbEstadoNuevo.BackColor = Color.White;
+            }
+
+            // Ruta de archivo (opcional)
+            if (!string.IsNullOrWhiteSpace(txtArchivoNuevo.Text) &&
+                !Regex.IsMatch(txtArchivoNuevo.Text.Trim(), @"^.+\\?.+\..+$"))
+            {
+                txtArchivoNuevo.BackColor = Color.LightPink;
+                mensaje += "\n- Ruta de archivo inválida. Asegúrate de tener formato válido (ej. carpeta\\archivo.pdf).";
+                esValido = false;
+            }
+            else
+            {
+                txtArchivoNuevo.BackColor = Color.White;
+            }
+
+            if (!esValido)
+            {
+                MessageBox.Show(mensaje, "Validación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return esValido;
+        }
+
     }
 }

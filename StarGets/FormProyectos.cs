@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -61,6 +62,8 @@ namespace StarGets
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             if (cbDepartamento.SelectedItem == null)
             {
                 MessageBox.Show("Selecciona un departamento.");
@@ -98,6 +101,8 @@ namespace StarGets
                 MessageBox.Show("Selecciona un proyecto.");
                 return;
             }
+
+            if (!ValidarCampos()) return;
 
             int idProyecto = Convert.ToInt32(dgvProyectos.CurrentRow.Cells[0].Value);
             int idDepartamento = (int)((dynamic)cbDepartamento.SelectedItem).Value;
@@ -197,5 +202,78 @@ namespace StarGets
         {
             LimpiarCampos();
         }
+
+        private bool ValidarCampos()
+        {
+            bool esValido = true;
+            string mensaje = "Corrige lo siguiente:\n";
+
+            // Nombre del proyecto
+            if (!Regex.IsMatch(txtNombre.Text.Trim(), @"^[\w\sáéíóúÁÉÍÓÚñÑ.,-]{3,50}$"))
+            {
+                txtNombre.BackColor = Color.LightPink;
+                mensaje += "\n- Nombre del proyecto inválido. Solo letras, números y espacios.";
+                esValido = false;
+            }
+            else txtNombre.BackColor = Color.White;
+
+            // Observación (opcional, mínimo si se escribe)
+            if (!string.IsNullOrWhiteSpace(txtObservacion.Text) && txtObservacion.Text.Trim().Length < 5)
+            {
+                txtObservacion.BackColor = Color.LightPink;
+                mensaje += "\n- Observación demasiado corta (mínimo 5 caracteres).";
+                esValido = false;
+            }
+            else txtObservacion.BackColor = Color.White;
+
+            // Estado del proyecto
+            if (!Regex.IsMatch(txtEstado.Text.Trim(), @"^(inicio|en proceso|finalizado)$"))
+            {
+                txtEstado.BackColor = Color.LightPink;
+                mensaje += "\n- Estado inválido. Usa: inicio, en proceso o finalizado.";
+                esValido = false;
+            }
+            else txtEstado.BackColor = Color.White;
+
+            // Descripción
+            if (!Regex.IsMatch(txtDescripcion.Text.Trim(), @"^.{5,}$"))
+            {
+                txtDescripcion.BackColor = Color.LightPink;
+                mensaje += "\n- Descripción demasiado corta. Mínimo 5 caracteres.";
+                esValido = false;
+            }
+            else txtDescripcion.BackColor = Color.White;
+
+            // Departamento
+            if (cbDepartamento.SelectedItem == null)
+            {
+                cbDepartamento.BackColor = Color.LightPink;
+                mensaje += "\n- Selecciona un departamento.";
+                esValido = false;
+            }
+            else cbDepartamento.BackColor = Color.White;
+
+            // Fechas
+            if (dtpEntrega.Value <= dtpInicio.Value)
+            {
+                dtpInicio.CalendarMonthBackground = Color.LightPink;
+                dtpEntrega.CalendarMonthBackground = Color.LightPink;
+                mensaje += "\n- La fecha de entrega debe ser posterior a la de inicio.";
+                esValido = false;
+            }
+            else
+            {
+                dtpInicio.CalendarMonthBackground = Color.White;
+                dtpEntrega.CalendarMonthBackground = Color.White;
+            }
+
+            if (!esValido)
+            {
+                MessageBox.Show(mensaje, "Validación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return esValido;
+        }
+
     }
 }

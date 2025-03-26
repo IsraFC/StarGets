@@ -6,10 +6,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Data Source=localhost\\SQLEXPRESS;Initial Catalog=StarGets;Integrated Security=True;Encrypt=False
 namespace StarGets
 {
     public partial class FormEmpleados: Form
@@ -86,6 +86,8 @@ namespace StarGets
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             if (cbDepartamento.SelectedItem == null || cbRol.SelectedItem == null)
             {
                 MessageBox.Show("Selecciona un rol y un departamento.");
@@ -121,6 +123,8 @@ namespace StarGets
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             if (idEmpleadoSeleccionado == -1)
             {
                 MessageBox.Show("Selecciona un empleado para actualizar.");
@@ -240,6 +244,100 @@ namespace StarGets
             cbDepartamento.SelectedIndex = -1;
             cbRol.SelectedIndex = -1;
             idEmpleadoSeleccionado = -1;
+        }
+
+        private bool ValidarCampos()
+        {
+            bool esValido = true;
+            string mensaje = "Corrija lo siguiente:\n";
+
+            // Nombre
+            if (!Regex.IsMatch(txtNombre.Text.Trim(), @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,50}$"))
+            {
+                txtNombre.BackColor = Color.LightPink;
+                mensaje = mensaje + "\nNombre inválido. Solo letras y espacios.";
+                esValido = false;
+            }
+            else txtNombre.BackColor = Color.White;
+
+            // Apellido paterno
+            if (!Regex.IsMatch(txtAp.Text.Trim(), @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,50}$"))
+            {
+                txtAp.BackColor = Color.LightPink;
+                mensaje = mensaje + "\nApellido paterno inválido.";
+                esValido = false;
+            }
+            else txtAp.BackColor = Color.White;
+
+            // Apellido materno
+            if (!Regex.IsMatch(txtAm.Text.Trim(), @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{2,50}$"))
+            {
+                txtAm.BackColor = Color.LightPink;
+                mensaje =  mensaje + "\nApellido materno inválido.";
+                esValido = false;
+            }
+            else txtAm.BackColor = Color.White;
+
+            // Correo
+            if (!Regex.IsMatch(txtCorreo.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                txtCorreo.BackColor = Color.LightPink;
+                mensaje = mensaje + "\nCorreo electrónico inválido.";
+                esValido = false;
+            }
+            else txtCorreo.BackColor = Color.White;
+
+            // Teléfono
+            if (!Regex.IsMatch(txtTelefono.Text.Trim(), @"^\d{10}$"))
+            {
+                txtTelefono.BackColor = Color.LightPink;
+                mensaje = mensaje + "\nTeléfono inválido. Debe contener 10 dígitos.";
+                esValido = false;
+            }
+            else txtTelefono.BackColor = Color.White;
+
+            // Usuario
+            if (!Regex.IsMatch(txtUsuario.Text.Trim(), @"^[a-zA-Z0-9_]{4,}$"))
+            {
+                txtUsuario.BackColor = Color.LightPink;
+                mensaje = mensaje + "\nUsuario inválido. Usa solo letras, números y guiones bajos.";
+                esValido = false;
+            }
+            else txtUsuario.BackColor = Color.White;
+
+            // Contraseña
+            if (!Regex.IsMatch(txtContraseña.Text.Trim(), @"^.{6,}$"))
+            {
+                txtContraseña.BackColor = Color.LightPink;
+                mensaje = mensaje + "\nContraseña inválida. Mínimo 6 caracteres.";
+                esValido = false;
+            }
+            else txtContraseña.BackColor = Color.White;
+
+            // Departamento
+            if (cbDepartamento.SelectedItem == null)
+            {
+                cbDepartamento.BackColor = Color.LightPink;
+                mensaje = mensaje + "\nSelecciona un departamento.";
+                esValido = false;
+            }
+            else cbDepartamento.BackColor = Color.White;
+
+            // Rol
+            if (cbRol.SelectedItem == null)
+            {
+                cbRol.BackColor = Color.LightPink;
+                mensaje = mensaje + "\nSelecciona un rol.";
+                esValido = false;
+            }
+            else cbRol.BackColor = Color.White;
+
+            if (!esValido)
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return esValido;
         }
     }
 }

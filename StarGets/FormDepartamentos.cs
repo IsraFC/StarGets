@@ -6,10 +6,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Data Source=localhost\\SQLEXPRESS;Initial Catalog=StarGets;Integrated Security=True;Encrypt=False
 namespace StarGets
 {
     public partial class FormDepartamentos: Form
@@ -42,6 +42,8 @@ namespace StarGets
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             if (txtNombreDepto.Text.Trim() == "")
             {
                 MessageBox.Show("Escribe un nombre para el departamento.");
@@ -63,6 +65,8 @@ namespace StarGets
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos()) return;
+
             if (idDepartamentoSeleccionado == -1)
             {
                 MessageBox.Show("Selecciona un departamento para actualizar.");
@@ -124,5 +128,30 @@ namespace StarGets
             txtNombreDepto.Clear();
             idDepartamentoSeleccionado = -1;
         }
+
+        private bool ValidarCampos()
+        {
+            bool esValido = true;
+            string mensaje = "Corrige lo siguiente:\n";
+
+            if (!Regex.IsMatch(txtNombreDepto.Text.Trim(), @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,50}$"))
+            {
+                txtNombreDepto.BackColor = Color.LightPink;
+                mensaje += "\n- Nombre inválido. Usa solo letras y mínimo 3 caracteres.";
+                esValido = false;
+            }
+            else
+            {
+                txtNombreDepto.BackColor = Color.White;
+            }
+
+            if (!esValido)
+            {
+                MessageBox.Show(mensaje, "Validación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return esValido;
+        }
+
     }
 }

@@ -9,8 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// Data Source=localhost\\SQLEXPRESS;Initial Catalog=StarGets;Integrated Security=True;Encrypt=False
-
 namespace StarGets
 {
     public partial class FormVerAvance: Form
@@ -70,11 +68,7 @@ namespace StarGets
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (cbFiltro.SelectedItem == null || cbOpciones.SelectedItem == null)
-            {
-                MessageBox.Show("Selecciona un filtro y una opción válida.");
-                return;
-            }
+            if (!ValidarCampos()) return;
 
             string filtro = cbFiltro.SelectedItem?.ToString();
             int id = (int)((dynamic)cbOpciones.SelectedItem).Value;
@@ -124,5 +118,37 @@ namespace StarGets
 
             lblResumen.Text = $"Total: {total} | Inicio: {inicio} | En proceso: {proceso} | Finalizado: {finalizado}";
         }
+
+        private bool ValidarCampos()
+        {
+            bool esValido = true;
+            string mensaje = "Corrige lo siguiente:\n";
+
+            // Filtro
+            if (cbFiltro.SelectedItem == null)
+            {
+                cbFiltro.BackColor = Color.LightPink;
+                mensaje += "\n- Selecciona un tipo de filtro (Proyecto o Colaborador).";
+                esValido = false;
+            }
+            else cbFiltro.BackColor = Color.White;
+
+            // Opción seleccionada
+            if (cbOpciones.SelectedItem == null)
+            {
+                cbOpciones.BackColor = Color.LightPink;
+                mensaje += "\n- Selecciona un proyecto o colaborador de la lista.";
+                esValido = false;
+            }
+            else cbOpciones.BackColor = Color.White;
+
+            if (!esValido)
+            {
+                MessageBox.Show(mensaje, "Validación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return esValido;
+        }
+
     }
 }
