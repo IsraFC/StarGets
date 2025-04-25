@@ -28,7 +28,7 @@ namespace StarGets
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from departamentos", conn);
+                SqlDataAdapter da = new SqlDataAdapter("select id_departamento, nombre_departamento from departamentos where estado_departamento = 'activo'", conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvDepartamentos.DataSource = dt;
@@ -91,19 +91,19 @@ namespace StarGets
         {
             if (idDepartamentoSeleccionado == -1)
             {
-                MessageBox.Show("Selecciona un departamento para eliminar.");
+                MessageBox.Show("Selecciona un departamento para dar de baja.");
                 return;
             }
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("delete from departamentos where id_departamento = @id", conn);
+                SqlCommand cmd = new SqlCommand("update departamentos set estado_departamento = 'inactivo' where id_departamento = @id", conn);
                 cmd.Parameters.AddWithValue("@id", idDepartamentoSeleccionado);
                 cmd.ExecuteNonQuery();
             }
 
-            MessageBox.Show("Departamento eliminado.");
+            MessageBox.Show("Departamento dado de baja.");
             CargarDepartamentos();
             LimpiarCampos();
         }

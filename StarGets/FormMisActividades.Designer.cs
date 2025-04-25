@@ -34,7 +34,6 @@
             this.starGetsDataSet = new StarGets.StarGetsDataSet();
             this.actividadesTableAdapter = new StarGets.StarGetsDataSetTableAdapters.actividadesTableAdapter();
             this.cbEstadoNuevo = new System.Windows.Forms.ComboBox();
-            this.txtArchivoNuevo = new System.Windows.Forms.TextBox();
             this.btnSubirArchivo = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,10 +42,15 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblRegistro = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.bttFile = new System.Windows.Forms.Button();
+            this.txtArchivoNuevo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMisActividades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMisActividades
@@ -77,17 +81,10 @@
             // cbEstadoNuevo
             // 
             this.cbEstadoNuevo.FormattingEnabled = true;
-            this.cbEstadoNuevo.Location = new System.Drawing.Point(175, 118);
+            this.cbEstadoNuevo.Location = new System.Drawing.Point(189, 118);
             this.cbEstadoNuevo.Name = "cbEstadoNuevo";
-            this.cbEstadoNuevo.Size = new System.Drawing.Size(237, 24);
+            this.cbEstadoNuevo.Size = new System.Drawing.Size(248, 24);
             this.cbEstadoNuevo.TabIndex = 1;
-            // 
-            // txtArchivoNuevo
-            // 
-            this.txtArchivoNuevo.Location = new System.Drawing.Point(175, 165);
-            this.txtArchivoNuevo.Name = "txtArchivoNuevo";
-            this.txtArchivoNuevo.Size = new System.Drawing.Size(237, 22);
-            this.txtArchivoNuevo.TabIndex = 2;
             // 
             // btnSubirArchivo
             // 
@@ -129,9 +126,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(14, 169);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 18);
+            this.label2.Size = new System.Drawing.Size(61, 18);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Ruta del archivo:";
+            this.label2.Text = "Archivo:";
             // 
             // label3
             // 
@@ -175,11 +172,40 @@
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // bttFile
+            // 
+            this.bttFile.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.bttFile.Location = new System.Drawing.Point(82, 169);
+            this.bttFile.Name = "bttFile";
+            this.bttFile.Size = new System.Drawing.Size(161, 23);
+            this.bttFile.TabIndex = 27;
+            this.bttFile.Text = "Seleccionar archivo...";
+            this.bttFile.UseVisualStyleBackColor = false;
+            this.bttFile.Click += new System.EventHandler(this.bttFile_Click);
+            // 
+            // txtArchivoNuevo
+            // 
+            this.txtArchivoNuevo.Location = new System.Drawing.Point(250, 169);
+            this.txtArchivoNuevo.Name = "txtArchivoNuevo";
+            this.txtArchivoNuevo.Size = new System.Drawing.Size(187, 22);
+            this.txtArchivoNuevo.TabIndex = 28;
+            // 
             // FormMisActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 543);
+            this.Controls.Add(this.txtArchivoNuevo);
+            this.Controls.Add(this.bttFile);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lblRegistro);
             this.Controls.Add(this.pictureBox3);
@@ -188,7 +214,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnSubirArchivo);
-            this.Controls.Add(this.txtArchivoNuevo);
             this.Controls.Add(this.cbEstadoNuevo);
             this.Controls.Add(this.dgvMisActividades);
             this.Name = "FormMisActividades";
@@ -197,6 +222,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.actividadesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.starGetsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +235,6 @@
         private System.Windows.Forms.BindingSource actividadesBindingSource;
         private StarGetsDataSetTableAdapters.actividadesTableAdapter actividadesTableAdapter;
         private System.Windows.Forms.ComboBox cbEstadoNuevo;
-        private System.Windows.Forms.TextBox txtArchivoNuevo;
         private System.Windows.Forms.Button btnSubirArchivo;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label1;
@@ -218,5 +243,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblRegistro;
         private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Button bttFile;
+        private System.Windows.Forms.TextBox txtArchivoNuevo;
     }
 }

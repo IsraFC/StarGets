@@ -244,7 +244,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(211, 31);
             this.btnEliminar.TabIndex = 18;
-            this.btnEliminar.Text = "Eliminar proyecto";
+            this.btnEliminar.Text = "Dar de baja";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 

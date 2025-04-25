@@ -50,7 +50,7 @@
             // 
             // txtNombreDepto
             // 
-            this.txtNombreDepto.Location = new System.Drawing.Point(209, 128);
+            this.txtNombreDepto.Location = new System.Drawing.Point(220, 127);
             this.txtNombreDepto.Name = "txtNombreDepto";
             this.txtNombreDepto.Size = new System.Drawing.Size(286, 22);
             this.txtNombreDepto.TabIndex = 0;
@@ -97,7 +97,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(182, 30);
             this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar registro";
+            this.btnEliminar.Text = "Dar de baja";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 

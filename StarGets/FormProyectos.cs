@@ -22,7 +22,7 @@ namespace StarGets
 
             CargarDepartamentos();
             CargarProyectos();
-            cbEstado.Items.AddRange(new string[] { "inicio", "en proceso", "activo" });
+            cbEstado.Items.AddRange(new string[] {"en proceso", "activo" });
         }
 
         private void CargarProyectos()
@@ -30,11 +30,27 @@ namespace StarGets
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from proyectos", conn);
+                SqlDataAdapter da = new SqlDataAdapter(@"
+            SELECT 
+                p.id_proyecto,
+                d.nombre_departamento,
+                p.nombre_proyecto,
+                p.observacion,
+                p.fecha_inicial,
+                p.fecha_entrega,
+                p.estado_proyecto,
+                p.descripcion
+            FROM proyectos p
+            INNER JOIN departamentos d ON p.id_departamento = d.id_departamento
+            WHERE p.estado_proyecto <> 'baja'", conn);
+
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvProyectos.DataSource = dt;
             }
+
+            if (dgvProyectos.Columns.Contains("id_proyecto"))
+                dgvProyectos.Columns["id_proyecto"].Visible = false;
         }
 
         private void CargarDepartamentos()
@@ -142,23 +158,31 @@ namespace StarGets
         {
             if (dgvProyectos.CurrentRow == null)
             {
-                MessageBox.Show("Selecciona un proyecto para eliminar.");
+                MessageBox.Show("Selecciona un proyecto para dar de baja.");
                 return;
             }
 
             int idProyecto = Convert.ToInt32(dgvProyectos.CurrentRow.Cells[0].Value);
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("delete from proyectos where id_proyecto = @id", conn);
-                cmd.Parameters.AddWithValue("@id", idProyecto);
-                cmd.ExecuteNonQuery();
-            }
+            DialogResult result = MessageBox.Show(
+                "¿Estás seguro de dar de baja este proyecto?",
+                "Confirmar baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            MessageBox.Show("Proyecto eliminado.");
-            CargarProyectos();
-            LimpiarCampos();
+            if (result == DialogResult.Yes)
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(
+                        "UPDATE proyectos SET estado_proyecto = 'baja' WHERE id_proyecto = @id", conn);
+                    cmd.Parameters.AddWithValue("@id", idProyecto);
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Proyecto dado de baja.");
+                CargarProyectos();
+                LimpiarCampos();
+            }
         }
 
         private void LimpiarCampos()
@@ -186,8 +210,8 @@ namespace StarGets
                 cbEstado.Text = row.Cells[6].Value.ToString();
                 txtDescripcion.Text = row.Cells[7].Value.ToString();
 
-                int idDepartamento = Convert.ToInt32(row.Cells[1].Value);
-
+                string nombreDepto = row.Cells[1].Value.ToString(); // columna con nombre del departamento
+                int idDepartamento = ObtenerIdDepartamentoPorNombre(nombreDepto);
                 foreach (var item in cbDepartamento.Items)
                 {
                     if (((dynamic)item).Value == idDepartamento)
@@ -228,10 +252,10 @@ namespace StarGets
             else txtObservacion.BackColor = Color.White;
 
             // Estado del proyecto
-            if (!Regex.IsMatch(cbEstado.Text.Trim(), @"^(inicio|en proceso|finalizado)$"))
+            if (!Regex.IsMatch(cbEstado.Text.Trim(), @"^(en proceso|activo)$"))
             {
                 cbEstado.BackColor = Color.LightPink;
-                mensaje += "\n- Estado inválido. Usa: inicio, en proceso o finalizado.";
+                mensaje += "\n- Estado inválido. Usa: en proceso o finalizado.";
                 esValido = false;
             }
             else cbEstado.BackColor = Color.White;
@@ -285,5 +309,18 @@ namespace StarGets
                 dashboard.Show();
             }
         }
+
+        private int ObtenerIdDepartamentoPorNombre(string nombre)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    "SELECT id_departamento FROM departamentos WHERE nombre_departamento = @nombre", conn);
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+                return (int)cmd.ExecuteScalar();
+            }
+        }
+
     }
 }

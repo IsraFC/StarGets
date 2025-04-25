@@ -159,5 +159,17 @@ namespace StarGets
                 dashboard.Show();
             }
         }
+
+        private void bttFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Seleccionar archivo para subir";
+            ofd.Filter = "Todos los archivos (*.*)|*.*";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtArchivoNuevo.Text = ofd.FileName;
+            }
+        }
     }
 }

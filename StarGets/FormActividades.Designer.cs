@@ -52,7 +52,6 @@
             this.starGetsDataSet = new StarGets.StarGetsDataSet();
             this.starGetsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
-            this.txtArchivo = new System.Windows.Forms.TextBox();
             this.actividadesTableAdapter = new StarGets.StarGetsDataSetTableAdapters.actividadesTableAdapter();
             this.lblActividades = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
@@ -114,7 +113,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(464, 172);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(218, 251);
+            this.txtDescripcion.Size = new System.Drawing.Size(218, 194);
             this.txtDescripcion.TabIndex = 6;
             // 
             // btnAgregar
@@ -147,9 +146,9 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(375, 62);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(149, 29);
+            this.btnEliminar.Size = new System.Drawing.Size(171, 29);
             this.btnEliminar.TabIndex = 10;
-            this.btnEliminar.Text = "Eliminar actividad";
+            this.btnEliminar.Text = "Cancelar actividad";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -157,7 +156,7 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(552, 62);
+            this.btnLimpiar.Location = new System.Drawing.Point(561, 62);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(149, 29);
             this.btnLimpiar.TabIndex = 11;
@@ -242,7 +241,7 @@
             this.dgvActividades.Name = "dgvActividades";
             this.dgvActividades.RowHeadersWidth = 51;
             this.dgvActividades.RowTemplate.Height = 24;
-            this.dgvActividades.Size = new System.Drawing.Size(339, 321);
+            this.dgvActividades.Size = new System.Drawing.Size(339, 264);
             this.dgvActividades.TabIndex = 19;
             this.dgvActividades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvActividades_CellContentClick);
             // 
@@ -267,16 +266,8 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(16, 393);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 18);
+            this.label8.Size = new System.Drawing.Size(0, 18);
             this.label8.TabIndex = 20;
-            this.label8.Text = "Ruta de archivo:";
-            // 
-            // txtArchivo
-            // 
-            this.txtArchivo.Location = new System.Drawing.Point(213, 390);
-            this.txtArchivo.Name = "txtArchivo";
-            this.txtArchivo.Size = new System.Drawing.Size(205, 22);
-            this.txtArchivo.TabIndex = 21;
             // 
             // actividadesTableAdapter
             // 
@@ -296,7 +287,7 @@
             // 
             this.btnRegresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(933, 453);
+            this.btnRegresar.Location = new System.Drawing.Point(933, 393);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(119, 32);
             this.btnRegresar.TabIndex = 23;
@@ -318,11 +309,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 497);
+            this.ClientSize = new System.Drawing.Size(1064, 442);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.lblActividades);
-            this.Controls.Add(this.txtArchivo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvActividades);
             this.Controls.Add(this.label7);
@@ -379,7 +369,6 @@
         private System.Windows.Forms.BindingSource starGetsDataSetBindingSource;
         private StarGetsDataSet starGetsDataSet;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtArchivo;
         private System.Windows.Forms.BindingSource actividadesBindingSource;
         private StarGetsDataSetTableAdapters.actividadesTableAdapter actividadesTableAdapter;
         private System.Windows.Forms.Label lblActividades;

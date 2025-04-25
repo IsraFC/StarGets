@@ -15,6 +15,8 @@ namespace StarGets
     public partial class FormActividades: Form
     {
         string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=StarGets;Integrated Security=True;Encrypt=False";
+        private int idActividadSeleccionada = -1;
+
         public FormActividades()
         {
             InitializeComponent();
@@ -23,7 +25,7 @@ namespace StarGets
             CargarColaboradores();
             CargarActividades();
 
-            cbEstado.Items.AddRange(new string[] { "inicio", "en proceso", "finalizado" });
+            cbEstado.Items.AddRange(new string[] {"en proceso", "finalizado" });
         }
 
         private void CargarProyectos()
@@ -82,11 +84,28 @@ namespace StarGets
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from actividades", conn);
+                SqlDataAdapter da = new SqlDataAdapter(@"
+                    SELECT 
+                        a.id_actividad,
+                        p.nombre_proyecto,
+                        e.nombre + ' ' + e.ap AS colaborador,
+                        a.nombre_actividad,
+                        a.fecha_inicio,
+                        a.fecha_entrega,
+                        a.estado,
+                        a.descripcion,
+                        a.url_archivo
+                    FROM actividades a
+                    JOIN proyectos p ON a.id_proyecto = p.id_proyecto
+                    JOIN empleados e ON a.id_empleado = e.id_empleado
+                    WHERE a.estado <> 'cancelada'", conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvActividades.DataSource = dt;
             }
+
+            if (dgvActividades.Columns.Contains("id_actividad"))
+                dgvActividades.Columns["id_actividad"].Visible = false;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -98,7 +117,6 @@ namespace StarGets
         {
             txtNombreActividad.Clear();
             txtDescripcion.Clear();
-            txtArchivo.Clear();
             cbProyecto.SelectedIndex = -1;
             cbColaborador.SelectedIndex = -1;
             cbEstado.SelectedIndex = -1;
@@ -123,8 +141,8 @@ namespace StarGets
             {
                 conn.Open();
                 string query = @"
-                    insert into actividades (id_proyecto, id_empleado, nombre_actividad, fecha_inicio, fecha_entrega, descripcion, estado, url_archivo)
-                    values (@id_proyecto, @id_empleado, @nombre, @inicio, @entrega, @descripcion, @estado, @archivo)";
+                    insert into actividades (id_proyecto, id_empleado, nombre_actividad, fecha_inicio, fecha_entrega, descripcion, estado)
+                    values (@id_proyecto, @id_empleado, @nombre, @inicio, @entrega, @descripcion, @estado)";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id_proyecto", idProyecto);
                 cmd.Parameters.AddWithValue("@id_empleado", idColaborador);
@@ -133,7 +151,6 @@ namespace StarGets
                 cmd.Parameters.AddWithValue("@entrega", dtpEntrega.Value);
                 cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
                 cmd.Parameters.AddWithValue("@estado", cbEstado.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@archivo", txtArchivo.Text);
                 cmd.ExecuteNonQuery();
             }
 
@@ -146,23 +163,27 @@ namespace StarGets
         {
             if (dgvActividades.CurrentRow == null)
             {
-                MessageBox.Show("Selecciona una actividad para eliminar.");
+                MessageBox.Show("Selecciona una actividad para cancelar.");
                 return;
             }
 
             int idActividad = Convert.ToInt32(dgvActividades.CurrentRow.Cells[0].Value);
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            DialogResult r = MessageBox.Show("¿Cancelar esta actividad?", "Confirmar", MessageBoxButtons.YesNo);
+            if (r == DialogResult.Yes)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("delete from actividades where id_actividad = @id", conn);
-                cmd.Parameters.AddWithValue("@id", idActividad);
-                cmd.ExecuteNonQuery();
-            }
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE actividades SET estado = 'cancelada' WHERE id_actividad = @id", conn);
+                    cmd.Parameters.AddWithValue("@id", idActividad);
+                    cmd.ExecuteNonQuery();
+                }
 
-            MessageBox.Show("Actividad eliminada.");
-            CargarActividades();
-            LimpiarCampos();
+                MessageBox.Show("Actividad cancelada.");
+                CargarActividades();
+                LimpiarCampos();
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -190,8 +211,7 @@ namespace StarGets
                         fecha_inicio = @inicio,
                         fecha_entrega = @entrega,
                         descripcion = @descripcion,
-                        estado = @estado,
-                        url_archivo = @archivo
+                        estado = @estado
                     where id_actividad = @id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id_proyecto", idProyecto);
@@ -201,7 +221,6 @@ namespace StarGets
                 cmd.Parameters.AddWithValue("@entrega", dtpEntrega.Value);
                 cmd.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
                 cmd.Parameters.AddWithValue("@estado", cbEstado.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@archivo", txtArchivo.Text);
                 cmd.Parameters.AddWithValue("@id", idActividad);
                 cmd.ExecuteNonQuery();
             }
@@ -217,18 +236,17 @@ namespace StarGets
             {
                 var row = dgvActividades.Rows[e.RowIndex];
                 txtNombreActividad.Text = row.Cells[3].Value.ToString();
-                txtDescripcion.Text = row.Cells[6].Value.ToString();
-                txtArchivo.Text = row.Cells[8].Value.ToString();
+                txtDescripcion.Text = row.Cells[7].Value.ToString();
                 dtpInicio.Value = Convert.ToDateTime(row.Cells[4].Value);
                 dtpEntrega.Value = Convert.ToDateTime(row.Cells[5].Value);
-                cbEstado.SelectedItem = row.Cells[7].Value.ToString();
+                cbEstado.SelectedItem = row.Cells[6].Value.ToString();
 
-                int idProyecto = Convert.ToInt32(row.Cells[1].Value);
-                int idColaborador = Convert.ToInt32(row.Cells[2].Value);
+                string nombreProyecto = row.Cells[1].Value.ToString();
+                string nombreColaborador = row.Cells[2].Value.ToString();
 
                 foreach (var item in cbProyecto.Items)
                 {
-                    if (((dynamic)item).Value == idProyecto)
+                    if (((dynamic)item).Text == nombreProyecto)
                     {
                         cbProyecto.SelectedItem = item;
                         break;
@@ -237,7 +255,7 @@ namespace StarGets
 
                 foreach (var item in cbColaborador.Items)
                 {
-                    if (((dynamic)item).Value == idColaborador)
+                    if (((dynamic)item).Text == nombreColaborador)
                     {
                         cbColaborador.SelectedItem = item;
                         break;
@@ -268,15 +286,6 @@ namespace StarGets
                 esValido = false;
             }
             else txtDescripcion.BackColor = Color.White;
-
-            // Ruta de archivo (opcional)
-            if (!string.IsNullOrWhiteSpace(txtArchivo.Text) && !Regex.IsMatch(txtArchivo.Text.Trim(), @"^.+\\?.+\..+$"))
-            {
-                txtArchivo.BackColor = Color.LightPink;
-                mensaje += "\n- Ruta de archivo inválida. Debe tener formato válido.";
-                esValido = false;
-            }
-            else txtArchivo.BackColor = Color.White;
 
             // Proyecto
             if (cbProyecto.SelectedItem == null)

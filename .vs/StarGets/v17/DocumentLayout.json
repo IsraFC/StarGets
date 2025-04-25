@@ -1,30 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\varko\\StarGets\\",
+  "WorkspaceRootPath": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\stargets\\stargets\\formveravance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formveravance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\documents\\github\\stargets\\stargets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\stargets\\stargets\\formveravance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formveravance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\documents\\github\\stargets\\stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\StarGets\\stargets\\formactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\StarGets\\stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\StarGets\\stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\StarGets\\stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\documents\\github\\stargets\\stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormVerAvance.cs",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormVerAvance.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormVerAvance.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormVerAvance.cs",
-              "RelativeToolTip": "StarGets\\FormVerAvance.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAuwKEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T18:54:48.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormActividades.cs",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormActividades.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormActividades.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormActividades.cs",
-              "RelativeToolTip": "StarGets\\FormActividades.cs",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAUwGcAAAAMAAAAAAAAAA==",
+              "Title": "FormDepartamentos.cs",
+              "DocumentMoniker": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormDepartamentos.cs",
+              "RelativeDocumentMoniker": "StarGets\\FormDepartamentos.cs",
+              "ToolTip": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormDepartamentos.cs",
+              "RelativeToolTip": "StarGets\\FormDepartamentos.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAjwFsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T18:49:27.645Z",
+              "WhenOpened": "2025-04-25T04:22:26.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormProyectos.cs",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormProyectos.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormProyectos.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormProyectos.cs",
-              "RelativeToolTip": "StarGets\\FormProyectos.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwFcAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FormDepartamentos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormDepartamentos.cs",
+              "RelativeDocumentMoniker": "StarGets\\FormDepartamentos.cs",
+              "ToolTip": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormDepartamentos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "StarGets\\FormDepartamentos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T18:46:05.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormProyectos.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormProyectos.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormProyectos.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormProyectos.cs [Dise\u00F1o]",
-              "RelativeToolTip": "StarGets\\FormProyectos.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T00:14:29.073Z",
+              "WhenOpened": "2025-04-25T04:20:52.738Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormVerAvance.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormVerAvance.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormVerAvance.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormVerAvance.cs [Dise\u00F1o]",
-              "RelativeToolTip": "StarGets\\FormVerAvance.cs [Dise\u00F1o]",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\Program.cs",
+              "RelativeDocumentMoniker": "StarGets\\Program.cs",
+              "ToolTip": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\Program.cs",
+              "RelativeToolTip": "StarGets\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T00:17:02.175Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormMisActividades.cs",
-              "DocumentMoniker": "C:\\Users\\varko\\StarGets\\StarGets\\FormMisActividades.cs",
-              "RelativeDocumentMoniker": "StarGets\\FormMisActividades.cs",
-              "ToolTip": "C:\\Users\\varko\\StarGets\\StarGets\\FormMisActividades.cs",
-              "RelativeToolTip": "StarGets\\FormMisActividades.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAWwKAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T18:19:31.716Z"
+              "WhenOpened": "2025-04-24T21:46:44.571Z",
+              "EditorCaption": ""
             }
           ]
         },

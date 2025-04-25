@@ -16,6 +16,7 @@ namespace StarGets
     {
         string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=StarGets;Integrated Security=True;Encrypt=False";
         private int idEmpleadoSeleccionado = -1;
+
         public FormEmpleados()
         {
             InitializeComponent();
@@ -72,16 +73,38 @@ namespace StarGets
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("select * from empleados", conn);
+                SqlDataAdapter da = new SqlDataAdapter(@"
+            SELECT 
+                e.id_empleado,
+                e.nombre,
+                e.ap,
+                e.am,
+                e.correo,
+                e.telefono,
+                e.usuario,
+                e.contraseña,
+                e.id_departamento,
+                d.nombre_departamento,
+                e.id_rol,
+                r.nombre_rol
+            FROM empleados e
+            JOIN departamentos d ON e.id_departamento = d.id_departamento
+            JOIN roles r ON e.id_rol = r.id_rol
+            WHERE e.estado_empleado = 'activo'", conn);
+
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvEmpleados.DataSource = dt;
             }
 
             if (dgvEmpleados.Columns.Contains("id_empleado"))
-            {
                 dgvEmpleados.Columns["id_empleado"].Visible = false;
-            }
+
+            if (dgvEmpleados.Columns.Contains("id_departamento"))
+                dgvEmpleados.Columns["id_departamento"].Visible = false;
+
+            if (dgvEmpleados.Columns.Contains("id_rol"))
+                dgvEmpleados.Columns["id_rol"].Visible = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -172,21 +195,29 @@ namespace StarGets
         {
             if (idEmpleadoSeleccionado == -1)
             {
-                MessageBox.Show("Selecciona un empleado para eliminar.");
+                MessageBox.Show("Selecciona un empleado para dar de baja.");
                 return;
             }
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("delete from empleados where id_empleado = @id", conn);
-                cmd.Parameters.AddWithValue("@id", idEmpleadoSeleccionado);
-                cmd.ExecuteNonQuery();
-            }
+            DialogResult result = MessageBox.Show(
+                "¿Seguro que deseas dar de baja al empleado?",
+                "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            MessageBox.Show("Empleado eliminado.");
-            CargarEmpleados();
-            LimpiarCampos();
+            if (result == DialogResult.Yes)
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(
+                        "UPDATE empleados SET estado_empleado = 'baja' WHERE id_empleado = @id", conn);
+                    cmd.Parameters.AddWithValue("@id", idEmpleadoSeleccionado);
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Empleado dado de baja.");
+                CargarEmpleados();
+                LimpiarCampos();
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -201,16 +232,16 @@ namespace StarGets
                 DataGridViewRow row = dgvEmpleados.Rows[e.RowIndex];
                 idEmpleadoSeleccionado = Convert.ToInt32(row.Cells[0].Value);
 
-                txtNombre.Text = row.Cells[2].Value.ToString();
-                txtAp.Text = row.Cells[3].Value.ToString();
-                txtAm.Text = row.Cells[4].Value.ToString();
-                txtCorreo.Text = row.Cells[5].Value.ToString();
-                txtTelefono.Text = row.Cells[6].Value.ToString();
-                txtUsuario.Text = row.Cells[7].Value.ToString();
-                txtContraseña.Text = row.Cells[8].Value.ToString();
+                txtNombre.Text = row.Cells[1].Value.ToString();
+                txtAp.Text = row.Cells[2].Value.ToString();
+                txtAm.Text = row.Cells[3].Value.ToString();
+                txtCorreo.Text = row.Cells[4].Value.ToString();
+                txtTelefono.Text = row.Cells[5].Value.ToString();
+                txtUsuario.Text = row.Cells[6].Value.ToString();
+                txtContraseña.Text = row.Cells[7].Value.ToString();
 
-                int idDepartamento = Convert.ToInt32(row.Cells[1].Value);
-                int idRol = Convert.ToInt32(row.Cells[9].Value);
+                int idDepartamento = Convert.ToInt32(row.Cells[8].Value);
+                int idRol = Convert.ToInt32(row.Cells[10].Value);
 
                 foreach (var item in cbDepartamento.Items)
                 {
