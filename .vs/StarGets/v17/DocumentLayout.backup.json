@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\documents\\github\\stargets\\stargets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\documents\\github\\stargets\\stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\documents\\github\\stargets\\stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\documents\\github\\stargets\\stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formmisactividades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\Documents\\GitHub\\StarGets\\stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\documents\\github\\stargets\\stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\formdepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormDepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:StarGets\\FormDepartamentos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|c:\\users\\varko\\documents\\github\\stargets\\stargets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF83A79A-2D2E-40C3-A08A-E337B62C01BC}|StarGets\\StarGets.csproj|solutionrelative:stargets\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +30,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "FormMisActividades.cs",
+              "DocumentMoniker": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormMisActividades.cs",
+              "RelativeDocumentMoniker": "StarGets\\FormMisActividades.cs",
+              "ToolTip": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormMisActividades.cs*",
+              "RelativeToolTip": "StarGets\\FormMisActividades.cs*",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAswBoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T04:39:33.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormMisActividades.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormMisActividades.cs",
+              "RelativeDocumentMoniker": "StarGets\\FormMisActividades.cs",
+              "ToolTip": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormMisActividades.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "StarGets\\FormMisActividades.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T04:39:27.21Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FormDepartamentos.cs",
               "DocumentMoniker": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormDepartamentos.cs",
               "RelativeDocumentMoniker": "StarGets\\FormDepartamentos.cs",
@@ -39,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormDepartamentos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\FormDepartamentos.cs",
               "RelativeDocumentMoniker": "StarGets\\FormDepartamentos.cs",
@@ -51,16 +84,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\Program.cs",
               "RelativeDocumentMoniker": "StarGets\\Program.cs",
               "ToolTip": "C:\\Users\\varko\\Documents\\GitHub\\StarGets\\StarGets\\Program.cs",
               "RelativeToolTip": "StarGets\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBIAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwBIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T21:46:44.571Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

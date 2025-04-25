@@ -24,7 +24,7 @@ namespace StarGets
             InitializeComponent();
             this.usuario = usuario;
 
-            cbEstadoNuevo.Items.AddRange(new string[] { "inicio", "en proceso", "finalizado" });
+            cbEstadoNuevo.Items.AddRange(new string[] {"en proceso", "finalizado" });
             CargarActividadesDelColaborador();
         }
 
